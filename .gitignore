@@ -16,3 +16,7 @@ Thumbs.db
 # Local configuration (если будете добавлять локальные настройки)
 config.local.php
 .env
+
+# Generated SQLite databases
+*.sqlite
+*.sqlite3
