@@ -24,7 +24,8 @@ try {
             PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC
         ]
     );
-
+    
+    echo "<pre>";
     echo "✓ Успешное подключение к MySQL серверу\n";
 
     // Create database if it doesn't exist
@@ -77,7 +78,7 @@ try {
     echo str_repeat("-", 80) . "\n";
 
     echo "\n✓ Все операции выполнены успешно!\n";
-
+    echo "</pre>";
 } catch (PDOException $e) {
     echo "✗ Ошибка: " . $e->getMessage() . "\n";
     exit(1);

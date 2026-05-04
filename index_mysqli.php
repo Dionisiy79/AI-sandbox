@@ -25,6 +25,7 @@ try {
     // Set charset to UTF-8
     $mysqli->set_charset('utf8mb4');
 
+    echo "<pre>";
     echo "✓ Успешное подключение к MySQL серверу\n";
 
     // Create database if it doesn't exist
@@ -77,7 +78,8 @@ try {
     echo str_repeat("-", 80) . "\n";
 
     echo "\n✓ Все операции выполнены успешно!\n";
-
+    echo "</pre>";
+    
 } catch (mysqli_sql_exception $e) {
     echo "✗ Ошибка: " . $e->getMessage() . "\n";
     exit(1);
@@ -87,3 +89,4 @@ try {
         $mysqli->close();
     }
 }
+
